@@ -1,15 +1,15 @@
 import { axiosWithAuth } from '@/api/interceptors';
-import { ITimeBlock, TypetTimeBlockFormState } from '@/types/time-block.types';
+import { ITimeBlockResponse, TypeTimeBlockFormState } from '@/types/time-block.types';
 
 class TimeBlockService {
-  private BASE_URL = '/user/time/blocks';
+  private BASE_URL = '/user/time-blocks';
 
   async getTimeBlocks() {
-    const res = await axiosWithAuth.get<ITimeBlock[]>(this.BASE_URL);
+    const res = await axiosWithAuth.get<ITimeBlockResponse[]>(this.BASE_URL);
     return res;
   }
 
-  async createTimeBlock(data: TypetTimeBlockFormState) {
+  async createTimeBlock(data: TypeTimeBlockFormState) {
     const res = await axiosWithAuth.post(this.BASE_URL, data);
     return res;
   }
@@ -19,7 +19,7 @@ class TimeBlockService {
     return res;
   }
 
-  async updateTomeBlock(id: string, data: TypetTimeBlockFormState) {
+  async updateTimeBlock(id: string, data: TypeTimeBlockFormState) {
     const res = await axiosWithAuth.put(`${this.BASE_URL}/${id}`, data);
     return res;
   }

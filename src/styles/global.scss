@@ -1,8 +1,4 @@
-$primary: #7551ff;
-$secondary: #f97912;
-$border: rgba(255, 255, 255, 0.12);
-$sidebar: #141515;
-$bg: #0e0f0f;
+@use './variables.scss' as vars;
 
 @media (prefers-color-scheme: dark) {
   $bg: #0e0f0f;
@@ -20,7 +16,7 @@ body {
   @apply text-base overflow-hidden;
   font-family: var(--font-zen), sans-serif;
   color: rgb(var(--foreground-rgb));
-  background-color: $bg;
+  background-color: vars.$bg;
 
   @media (max-width: 1200px) {
     font-size: 16px;

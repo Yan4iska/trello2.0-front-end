@@ -5,11 +5,15 @@ export interface IPomodoroRoundResponse extends IBase {
   totalSeconds: number;
 }
 
-export interface IPomodoroSessionPesponse extends IBase {
+export interface IPomodoroSessionResponse extends IBase {
   isCompleted: boolean;
   rounds?: IPomodoroRoundResponse[];
 }
 
 export type TypePomodoroSessionFromState = Partial<
-  Omit<IPomodoroSessionPesponse, 'id' | 'createdAt' | 'updatedAt'>
+  Omit<IPomodoroSessionResponse, 'id' | 'createdAt' | 'updatedAt'>
+>;
+
+export type TypePomodoroRoundState = Partial<
+  Omit<IPomodoroRoundResponse, 'id' | 'createdAt' | 'updatedAt'>
 >;

@@ -1,0 +1,22 @@
+// Variables
+$primary: #3b82f6;
+$brand-700: #1d4ed8;
+$white: #ffffff;
+
+// Styles
+.button {
+  @apply rounded-lg py-2 px-7 text-base font-medium transition;
+  background: transparent;
+  border: 1px solid $primary;
+  color: $white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.75rem;
+
+  &:hover {
+    background-color: $primary;
+  }
+
+  &:active {
+    background-color: $brand-700;
+  }
+}

@@ -3,7 +3,7 @@ import { IBase } from './root.types';
 export enum EnumTaskPriority {
   low = 'low',
   medium = 'medium',
-  ligih = 'high',
+  higih = 'high',
 }
 
 export interface ITaskResponse extends IBase {
